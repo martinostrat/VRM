@@ -14,14 +14,13 @@ sudo apt-get install php-xml
 
 ### Installing
 
-To install the software you have following options:
+o install the software you have following options:
+* [Silex](http://silex.sensiolabs.org/) - The web framework used
+* [Composer](https://getcomposer.org/) - Dependency Management
+* [Twig](http://twig.sensiolabs.org/) - Php template engine
+* [Doctrine DBAL](http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/index.html) - Database connection
 
-Or download it manually from the gitlab [page](https://gitlab.com/i-sepp/bcs-koolitus).
 
-Then you need to have composer installed in your computer.
-And then you need to install composer packages in your project folder.
-```
-composer install
 ```
 
 ## Built With
