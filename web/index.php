@@ -1,5 +1,6 @@
 <?php 
 // web/index.php
+// using silex framework
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
@@ -8,8 +9,17 @@ $app = new Silex\Application();
 
 $app['debug'] = true;
 
+// using Twig template framework
 $app->register(new Silex\Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__.'/../views',
+]);
+
+// using Doctrine DBAL
+$app->register(new Silex\Provider\DoctrineServiceProvider(), [
+	'db.options' => [
+		'driver' => 'pdo_sqlite',
+		'path' => __DIR__.'/../database/app.db',
+		],
 ]);
 
 $app->get('/bookings/create', function () use ($app) {
